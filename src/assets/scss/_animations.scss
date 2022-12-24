@@ -1,0 +1,177 @@
+@import './mixin';
+
+@keyframes showModalDesktop {
+   0% {
+      transform: translate(-50%, -100%);
+   }
+
+   100% {
+      transform: translate(-50%, 50%);
+   }
+}
+
+@keyframes showModalMobile {
+   0% {
+      transform: translate(-50%, -100%);
+   }
+
+   100% {
+      transform: translate(-50%, 0%);
+   }
+}
+
+@keyframes hideModalDesktop {
+   0% {
+      transform: translate(-50%, 50%);
+   }
+
+   100% {
+      transform: translate(-50%, -100%);
+   }
+}
+
+@keyframes hideModalMobile {
+   0% {
+      transform: translate(-50%, 0%);
+   }
+
+   100% {
+      transform: translate(-50%, -100%);
+   }
+}
+
+@keyframes showBackdrop {
+   0% {
+      opacity: 0%;
+   }
+
+   100% {
+      opacity: 100%;
+   }
+}
+
+@keyframes hideBackdrop {
+   0% {
+      opacity: 100%;
+      visibility: visible;
+   }
+
+   99% {
+      opacity: 0%;
+      visibility: visible;
+   }
+
+   100% {
+      opacity: 0%;
+      visibility: hidden;
+   }
+}
+
+@keyframes show {
+   0% {
+      transform: scale(0);
+      opacity: 0;
+   }
+
+   100% {
+      transform: scale(1);
+      opacity: 1;
+   }
+}
+
+@keyframes hide {
+   0% {
+      transform: scale(1);
+      opacity: 1;
+   }
+
+   100% {
+      transform: scale(0);
+      opacity: 0;
+   }
+}
+
+@keyframes puls {
+   0% {
+      transform: scale(0.7);
+   }
+
+   50% {
+      transform: scale(1);
+   }
+
+   100% {
+      transform: scale(0.7);
+   }
+}
+@keyframes slideUp {
+   0% {
+      transform: translateY(100px);
+      opacity: 0;
+   }
+
+   100% {
+      transform: translateY(0px);
+      opacity: 1;
+   }
+}
+
+@keyframes slideDown {
+   0% {
+      transform: translateY(0px);
+      opacity: 1;
+   }
+
+   100% {
+      transform: translateY(100px);
+      opacity: 0;
+   }
+}
+
+@keyframes winnerRingsIn {
+   0% {
+      box-shadow: 0 0 0 0;
+      transition: all 0.3s;
+   }
+
+   33% {
+      box-shadow: 0 0 0 3rem rgba(255, 255, 255, 0.2);
+      transition: all 0.3s;
+   }
+
+   66% {
+      box-shadow: 0 0 0 3rem rgba(255, 255, 255, 0.2),
+         0 0 0 6rem rgba(255, 255, 255, 0.15);
+      transition: all 0.3s;
+   }
+
+   100% {
+      box-shadow: 0 0 0 3rem rgba(255, 255, 255, 0.2),
+         0 0 0 6rem rgba(255, 255, 255, 0.15),
+         0 0 0 9rem rgba(255, 255, 255, 0.1);
+   }
+}
+
+@keyframes winnerRingsOut {
+   0% {
+      box-shadow: 0 0 0 3rem rgba(255, 255, 255, 0.2),
+         0 0 0 6rem rgba(255, 255, 255, 0.15),
+         0 0 0 9rem rgba(255, 255, 255, 0.1);
+      transition: all 0.3s;
+   }
+
+   33% {
+      box-shadow: 0 0 0 3rem rgba(255, 255, 255, 0.2),
+         0 0 0 6rem rgba(255, 255, 255, 0.15);
+      transition: all 0.3s;
+   }
+
+   66% {
+      box-shadow: 0 0 0 3rem rgba(255, 255, 255, 0.2);
+      transition: all 0.3s;
+   }
+
+   100% {
+      box-shadow: 0 0 0 0;
+   }
+}

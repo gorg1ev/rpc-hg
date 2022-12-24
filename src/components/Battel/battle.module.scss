@@ -1,0 +1,76 @@
+@import '../../assets/scss/variables';
+@import '../../assets/scss/mixin';
+@import '../../assets/scss/animations';
+
+.battle {
+   margin: 6rem auto 0;
+   display: flex;
+   flex-wrap: wrap;
+   justify-content: center;
+   gap: 8rem;
+   align-items: center;
+
+   @include response($bp-3) {
+      gap: 4rem;
+   }
+
+   @include response(500px) {
+      gap: 2rem;
+   }
+
+   .hand-picked {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 5rem;
+   }
+
+   .play-again {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 2.5rem;
+
+      button {
+         font-size: 1.5rem;
+         text-transform: uppercase;
+         padding: 2rem 6rem;
+         border-radius: 7px;
+         background-color: white;
+         cursor: pointer;
+         transition: 0.5s;
+
+         &:hover {
+            color: $rock1;
+         }
+      }
+
+      @include response(877px) {
+         margin-top: -5rem;
+         order: 1;
+      }
+      @include response($bp-3) {
+         margin-top: 2rem;
+      }
+   }
+}
+
+.show {
+   animation: show 0.3s forwards;
+}
+
+.hide {
+   animation: hide 0.3s forwards;
+}
+
+.slideUp {
+   animation: slideUp 1s forwards;
+}
+
+.slideDown {
+   animation: slideDown 1s forwards;
+}
+
+.zIndex {
+   z-index: 10;
+}

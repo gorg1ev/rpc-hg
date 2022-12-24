@@ -1,0 +1,86 @@
+@import '../../assets/scss/variables';
+@import '../../assets/scss/mixin';
+@import '../../assets/scss/animations';
+
+.hand {
+   width: 20rem;
+   height: 20rem;
+   border-radius: 50%;
+   position: relative;
+
+   img {
+      height: 8rem;
+   }
+
+   @include response($bp-3) {
+      width: 13rem;
+      height: 13rem;
+
+      img {
+         height: 5rem;
+      }
+   }
+}
+
+.rock {
+   @include hand($rock1, $rock2);
+   margin: 0px auto;
+}
+
+.paper {
+   @include hand($paper1, $paper2);
+}
+
+.scissors {
+   @include hand($scissors1, $scissors2);
+}
+
+.rock-choosen {
+   @include hand($rock1, $rock2, false);
+}
+
+.paper-choosen {
+   @include hand($paper1, $paper2, false);
+}
+
+.scissors-choosen {
+   @include hand($scissors1, $scissors2, false);
+}
+
+.blank {
+   background-color: $background2;
+   opacity: 0.5;
+   width: 20rem;
+   height: 20rem;
+   border-radius: 50%;
+   animation: puls 2s infinite;
+
+   @include response($bp-3) {
+      width: 13rem;
+      height: 13rem;
+   }
+}
+
+.span {
+   width: 20rem;
+   height: 20rem;
+   border-radius: 50%;
+   position: absolute;
+   top: 50%;
+   left: 50%;
+   transform: translate(-50%, -50%);
+   z-index: -1;
+
+   @include response($bp-3) {
+      width: 13rem;
+      height: 13rem;
+   }
+}
+
+.winnerIn {
+   animation: winnerRingsIn 1s forwards;
+}
+
+.winnerOut {
+   animation: winnerRingsOut 1s forwards;
+}

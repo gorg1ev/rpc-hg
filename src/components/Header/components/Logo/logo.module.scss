@@ -1,0 +1,15 @@
+@import '../../../../assets/scss/variables';
+@import '../../../../assets/scss/mixin';
+
+.img {
+   height: 9.5rem;
+   margin-left: 1rem;
+
+   @include response($bp-1) {
+      height: 7rem;
+   }
+
+   @include response($bp-3) {
+      height: 5rem;
+   }
+}

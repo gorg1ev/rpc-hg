@@ -1,0 +1,104 @@
+@import '../.././assets/scss/variables';
+@import '../.././assets/scss/mixin';
+@import '../.././assets/scss/animations';
+
+.backdrop {
+   position: fixed;
+   top: 0;
+   right: 0;
+   bottom: 0;
+   left: 0;
+   visibility: hidden;
+   z-index: 20;
+   background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal {
+   width: 40rem;
+   padding: 3rem;
+   background-color: white;
+   border-radius: 5px;
+   text-align: center;
+   position: absolute;
+   left: 50%;
+   transform: translate(-50%, -100%);
+   z-index: 30;
+
+   div {
+      display: flex;
+      justify-content: space-between;
+
+      img {
+         align-self: center;
+         margin-top: 0;
+         cursor: pointer;
+
+         @media only screen and (min-width: $bp-2) {
+            transform: rotate(0);
+            transition: transform 0.3s ease-in-out;
+
+            &:hover {
+               transform: rotate(90deg);
+            }
+         }
+      }
+   }
+
+   img {
+      margin-top: 5rem;
+   }
+
+   @include response($bp-3) {
+      height: 100vh;
+      width: 100%;
+      padding: 0;
+
+      div {
+         display: block;
+
+         h3 {
+            margin-top: 10rem;
+         }
+
+         img {
+            position: absolute;
+            left: 50%;
+            bottom: 10rem;
+            margin-top: 0;
+         }
+      }
+
+      img {
+         margin-top: 10rem;
+      }
+   }
+}
+
+.show-modal {
+   animation: showModalDesktop 1s forwards ease-in-out;
+
+   @include response($bp-3) {
+      animation: showModalMobile 1s forwards ease-in-out;
+   }
+}
+
+.hide-modal {
+   animation: hideModalDesktop 1s forwards ease-in-out;
+
+   @include response($bp-3) {
+      animation: hideModalMobile 1s forwards ease-in-out;
+   }
+}
+
+.show-backdrop {
+   visibility: visible;
+   animation: showBackdrop 0.5s forwards ease-in-out;
+}
+
+.hide-backdrop {
+   animation: hideBackdrop 0.5s forwards ease-in-out;
+}
+
+.h3 {
+   font-size: 3.2rem;
+}
